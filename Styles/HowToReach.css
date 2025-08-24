@@ -1,0 +1,156 @@
+.reach-section {
+  position: relative;
+  background: #f5f7f6;
+  /* padding: 60px 20px; */
+  position: relative;
+  overflow: hidden;
+}
+
+.reach-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Left Side */
+.reach-left {
+  flex: 1;
+  text-align: center;
+}
+
+.reach-left h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(20px, 4vw, 32px); /* ✅ responsive font size */
+  font-weight: 700;
+  color: #064e3b;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.reach-graphics {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* ✅ allows better shrinking */
+  max-width: 100%;
+}
+
+.point-road {
+  width: clamp(150px, 40vw, 250px); /* ✅ scales with screen */
+}
+
+.hut,
+.hut0 {
+  position: absolute;
+  max-width: 30%; /* ✅ keep them proportional */
+  height: auto;
+  opacity: 0.85;
+}
+
+.hut {
+  right: 5%;
+  top: 25%;
+}
+
+.hut0 {
+  left: -10%;
+  top: 5%;
+  max-width: 40%;
+}
+
+/* Right Side */
+.reach-right {
+  flex: 2;
+  margin-top: 40px;
+  font-family: "Poppins", sans-serif; /* ✅ set Poppins */
+  font-weight: 600; /* ✅ Bold as base */
+  color: #222;
+}
+
+.reach-block h3 {
+  color: #064e3b;
+  font-size: clamp(16px, 2vw, 24px);
+  font-weight: 700; /* stays bold */
+  margin-bottom: 12px;
+}
+
+.reach-block ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.reach-block li {
+  font-weight: 500; /* slightly lighter than bold for readability */
+  font-size: clamp(14px, 1.5vw, 18px);
+  line-height: 110%;
+  text-transform: capitalize;
+  margin-bottom: 8px;
+}
+
+/* Dashed Line */
+.dashed-line {
+  border-bottom: 2px dashed #ccc;
+  margin: 20px 0;
+}
+
+/* Decorative Strokes */
+.decorative-stroke {
+  position: absolute;
+  width: 200px;
+  opacity: 0.6;
+}
+
+.top-stroke {
+  position: absolute;
+
+  right: -70px;
+  height: 70%;
+}
+
+.bottom-stroke {
+  bottom: 10px;
+  left: 20px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .reach-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .reach-left {
+    margin-bottom: 30px;
+  }
+
+  .reach-block ul {
+    padding-left: 0;
+    list-style-position: inside;
+  }
+
+  .decorative-stroke {
+    display: none;
+  }
+}
+@media (max-width: 900px) {
+  .reach-graphics {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .point-road {
+    width: 70%; /* shrink road */
+  }
+
+  .hut,
+  .hut0 {
+    position: static; /* ✅ removes overlap issues */
+    max-width: 50%;
+    margin: 10px auto;
+  }
+}

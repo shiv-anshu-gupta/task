@@ -1,0 +1,84 @@
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 8px 40px;
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  right: 10px;
+  z-index: 1000;
+  width: calc(100% - 20px);
+  box-sizing: border-box;
+  height: 80px; /* ✅ reduced navbar height */
+}
+
+/* Logo */
+.navbar-logo img {
+  height: 65px; /* ✅ balanced logo size */
+  width: auto;
+}
+
+/* Nav links */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 40px; /* ✅ spacing */
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  display: inline-block;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600; /* ✅ SemiBold */
+  font-size: 18px; /* ✅ clean, not oversized */
+  line-height: 100%;
+  text-transform: uppercase;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #2d7abf;
+}
+
+/* ✅ Responsive adjustments */
+@media (max-width: 1200px) {
+  .navbar-links {
+    gap: 25px;
+  }
+
+  .navbar-links a {
+    font-size: 16px;
+  }
+
+  .navbar-logo img {
+    height: 55px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 6px 20px;
+    height: 65px;
+  }
+
+  .navbar-links {
+    gap: 12px;
+  }
+
+  .navbar-links a {
+    font-size: 14px; /* ✅ readable but smaller on mobile */
+  }
+
+  .navbar-logo img {
+    height: 40px;
+  }
+}

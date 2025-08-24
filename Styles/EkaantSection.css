@@ -1,0 +1,97 @@
+.ekaant-section {
+  background: #fff;
+  padding: 60px 20px;
+}
+
+.ekaant-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ekaant-content {
+  color: #333;
+}
+
+.ekaant-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+.ekaant-title span {
+  color: #666;
+  font-weight: normal;
+}
+
+/* ✅ Paragraph style (scaled down for better balance with image) */
+.ekaant-content p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500; /* Medium */
+  font-size: 22px; /* ✅ compact size */
+  line-height: 155%; /* ✅ more breathable */
+  letter-spacing: 0;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+  color: #333;
+  max-width: 95%; /* ✅ prevents overly wide text blocks */
+}
+
+/* Button */
+.ekaant-button {
+  background: #003e17; /* dark green */
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.ekaant-button:hover {
+  background: #046b4f;
+}
+
+/* Image */
+.ekaant-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 50px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
+}
+
+/* ✅ Responsive */
+@media (max-width: 1200px) {
+  .ekaant-content p {
+    font-size: 18px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .ekaant-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .ekaant-content {
+    order: 2;
+  }
+
+  .ekaant-image {
+    order: 1;
+  }
+
+  .ekaant-content p {
+    font-size: 16px;
+    line-height: 150%;
+    max-width: 100%;
+  }
+}

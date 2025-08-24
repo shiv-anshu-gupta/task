@@ -1,0 +1,77 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #003a24; /* dark green */
+  color: #ffffff;
+  padding: 40px 60px;
+  font-family: "Poppins", sans-serif; /* ✅ global */
+}
+
+/* Left side (Main message) */
+.footer-left {
+  flex: 1;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400; /* Regular */
+  font-style: normal;
+  font-size: 32px; /* ⬅️ reduced from 55px */
+  line-height: 150%;
+  letter-spacing: 0;
+  text-align: left;
+  max-width: 420px;
+  text-transform: uppercase;
+}
+
+/* Right side (Contact info) */
+.footer-right {
+  flex: 1;
+  text-align: right;
+}
+
+.footer-right p {
+  margin: 8px 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600; /* SemiBold */
+  font-size: 20px; /* ⬅️ reduced from 40px */
+  line-height: 145%;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.footer-right .label {
+  font-weight: 600;
+  margin-right: 6px;
+}
+
+/* ✅ Responsive */
+@media (max-width: 1200px) {
+  .footer-left {
+    font-size: 26px; /* smaller on tablets */
+  }
+  .footer-right p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 25px 20px;
+  }
+
+  .footer-left {
+    font-size: 22px;
+    line-height: 140%;
+    margin-bottom: 20px;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+
+  .footer-right p {
+    font-size: 16px;
+  }
+}

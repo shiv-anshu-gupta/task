@@ -1,0 +1,83 @@
+.hero-section {
+  position: relative;
+  height: 130vh; /* Full screen height */
+  width: 100vw; /* Full width */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+/* Dark overlay for better text visibility */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4); /* adjust darkness */
+  z-index: 1;
+}
+
+.hero-content {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2; /* above overlay */
+  text-align: center;
+  width: 100%;
+  padding: 0 16px;
+}
+
+/* ✅ Title */
+/* ✅ Title */
+.hero-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600; /* Bold */
+  font-size: 45px; /* ✅ balanced default */
+  line-height: 110%;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+/* Subtitle */
+.hero-subtitle {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 300;
+  letter-spacing: 0.025em;
+}
+
+/* ✅ Responsive adjustments */
+@media (min-width: 1440px) {
+  .hero-title {
+    font-size: 60px; /* only on extra-large screens */
+  }
+}
+
+@media (max-width: 1200px) {
+  .hero-title {
+    font-size: 36px; /* large tablets / laptops */
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 22px; /* mobile */
+  }
+  .hero-subtitle {
+    font-size: 11px;
+  }
+}
+
+/* Loading state */
+.loading-placeholder {
+  height: 100vh;
+  width: 100%;
+  background-color: #111827;
+}
