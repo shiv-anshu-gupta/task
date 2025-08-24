@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/HowToReach.css";
+import "../../Styles/HowToReach.css";
 
 // Import SVGs
 import pointRoad from "/point-road.svg";
